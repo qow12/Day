@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Dhia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" id="ambient"></div>
+  <audio id="backsound" preload="auto" autoplay>
+    <source src="back-music.mp3" type="audio/mpeg">
+  </audio>
+  <div class="wrap">
+    <header class="top-header">
+      <h1 class="top-headline">HAPPY BIRTHDAY!!</h1>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="card hero">
+      <div class="avatar">
+        <img src="photos/photo-1.jpg" alt="Dhia">
+      </div>
+      <div>
+        <div class="eyebrow"><span class="line"></span> Happy Birthday!! sayangg</div>
+        <div class="hero-name">Dhia<span class="age">my special girl&lt;3</span></div>
+        <p class="hero-desc">She's Dhia — my pretty, beauty beautiful, gorgeous, clever, cute lil butterfly princess from another world that make she so gorgeous in my eyes and looks like a rainbow!!. I. LOVE. HER. SO. MUCHHHHH. She's 17 now, and her hobbies are drawing, doodling, reading, writing, watching cartoons, and learning new things that she finds interesting and cool.
+One of the things I really love about her is her doodling :3 She has already drawn my face so many times, and honestly, I love every single one of them so muchhhhh. It makes me really happy knowing that she enjoys drawing little things like that. She's such a talented and wonderful person, and I really hope the skills she's learning now will be useful for her in the future. I hope she keeps creating, learning, and doing the things she loves.
+Enjoy your gifts from me, sweetie&lt;3</p>
+        <div class="stat-row">
+          <div class="stat"><span class="num">156%</span><span class="lab">Cute</span></div>
+          <div class="stat"><span class="num">260%</span><span class="lab">Gorgeous</span></div>
+          <div class="stat"><span class="num">142%</span><span class="lab">Clever</span></div>
+          <div class="stat"><span class="num">999%</span><span class="lab">Soothing</span></div>
+          <div class="stat"><span class="num">320%</span><span class="lab">Diligent</span></div>
+          <div class="stat"><span class="num">∞</span><span class="lab">Mine</span></div>
+          <div class="stat"><span class="num">Uncountable</span><span class="lab">Overall</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="slide">
+      <div class="slide-track">
+        <div class="text">
+          <p>Happy Birthday sayangg!! ✦</p>
+          <p>today is all yours ✦</p>
+          <p>loved beyond words ✦</p>
+          <p>Enjoy your day ✦</p>
+          <p>Love you my sweetheart ✦</p>
+        </div>
+        <div class="text" aria-hidden="true">
+          <p>Happy Birthday sayangg!! ✦</p>
+          <p>today is all yours ✦</p>
+          <p>loved beyond words ✦</p>
+          <p>Enjoy your day ✦</p>
+          <p>Love you my sweetheart ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="grid">
+      <div class="card c-music">
+        <div class="card-title">
+          Favorite Song
+          <span class="icn">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </span>
+        </div>
+
+        <div class="player">
+          <div class="cover">
+            <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+
+          <div class="player-info">
+            <div class="song">The Simple Things - Michael Carreon</div>
+            <div class="artist">Feelings w odil?</div>
+
+            <div class="progress-row">
+              <span id="current-time">0:00</span>
+
+              <div class="progress-bar">
+                <i id="progress"></i>
+              </div>
+
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="ctrl-btn" id="prev-btn"><svg viewBox="0 0 24 24"><path d="M19 20 9 12l10-8v16Z"/><path d="M5 19V5"/></svg></button>
+            <button class="ctrl-btn play" id="play-btn"><svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7-11-7Z"/></svg></button>
+            <button class="ctrl-btn" id="next-btn"><svg viewBox="0 0 24 24"><path d="M5 4l10 8-10 8V4Z"/><path d="M19 5v14"/></svg></button>
+          </div>
+        </div>
+        <audio id="music">
+          <source src="The Simple Things.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <button type="button" class="card c-quote gift-quote-card" onclick="openForm()" aria-haspopup="dialog">
+        <div class="gift-box">
+          <div class="gift-bow"><span></span><span></span></div>
+          <div class="gift-lid"></div>
+          <div class="gift-body">
+            <div class="gift-ribbon-v"></div>
+            <div class="gift-ribbon-h"></div>
+          </div>
+        </div>
+        <span class="gift-label">Dear for you</span>
+        <span class="gift-sub">tap to open</span>
+      </button>
+
+      <div class="card c-time gallery-card">
+        <div class="gallery-scroll">
+          <div class="gallery-track" id="galleryTrack">
+            <!-- photos are injected here by JS, randomized on every page load -->
+          </div>
+        </div>
+        <div class="gallery-wish">✦ make a wish ✦</div>
+      </div>
+
+      <div class="card c-todo">
+        <div class="card-title">Songs<span class="more">···</span></div>
+        <ul class="mood-list">
+          <li><span class="pip"></span>Syko - Brooklyn Blood Pop</li>
+          <li><span class="pip"></span>Stitches - Shwan Mendes</li>
+          <li><span class="pip"></span>Confidence - Kim</li> 
+          <li><span class="pip"></span>We Are young - Fun.</li>
+          <li><span class="pip"></span>Crush - Tessa Violet</li>
+          <li><span class="pip"></span>The Simple Things - Michael Carreon</li>
+          <li><span class="pip"></span>Sweather Weather - The Nightborhood</li>
+          <li><span class="pip"></span>Softcore - The Nightborhood</li>
+        </ul>
+      </div>
+      
+      <div class="card c-todo">
+        <div class="card-title">Personalities<span class="more">···</span></div>
+        <ul class="todo-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Cute</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Beautiful</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Gorgeous</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Clever</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Soothing</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Gorgeous</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" fill="none"><path d="M5 12l5 5 9-10"/></svg></span>Mine</li>
+        </ul>
+      </div>
+
+      <div class="card c-mood">
+        <div class="card-title">Hobbies<span class="more">···</span></div>
+        <ul class="mood-list">
+          <li><span class="pip"></span>Drawing</li>
+          <li><span class="pip"></span>Doodling</li>
+          <li><span class="pip"></span>Editing</li>
+          <li><span class="pip"></span>Reading</li>
+          <li><span class="pip"></span>Learning</li>
+          <li><span class="pip"></span>Chiling</li>
+          <li><span class="pip"></span>Watching Cartoons</li>
+        </ul>
+      </div>
+
+      <div class="wishes-container">
+        <div class="loved-eyebrow"><span class="line"></span>WHY I LOVE YOU?</div>
+        <div class="wishes-group">
+          <div class="loved-track">
+            <div class="card wishes-card">
+              <p>Because you're the colors that make my days feel more beautiful and colorful.</p>
+            </div>
+            <div class="card wishes-card">
+              <p>Because you're my happiness, and you always make me smile whenever I hear your voice.</p>
+            </div>
+            <div class="card wishes-card">
+              <p>You're the one who supports me every day, every time, and every moment.</p>
+            </div>
+            <div class="card wishes-card">
+              <p>You're my little pretty butterfly who can always make me laugh. 🦋</p>
+            </div>
+
+            <div class="card wishes-card">
+              <p>You're the person who has stayed by my side, wherever I am and whenever I need you.</p>
+            </div>
+            <div class="card wishes-card">
+              <p>You've taught me so many things that I didn't know before.</p>
+            </div>
+            <div class="card wishes-card">
+              <p>You're also the person who is always willing to help me and guide me whenever I make mistakes.</p>
+            </div>
+            <div class="card wishes-card">
+              <p>And you're the one who has always been patient with me, with all of my behavior, mistakes, and everything I've done all this time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wishes-container">
+        <div class="loved-eyebrow"><span class="line"></span>Wishes</div>
+        <div class="wishes-group">
+          <div class="wishes-track">
+            <div class="card wishes-card">
+              <span class="num">01</span>
+              <p>I hope you always stay happy, no matter what happens to you.</p>
+              <span class="num">02</span>
+              <p>I hope you never lose your beautiful smile, your creativity, and that little spark that makes you is you.</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">03</span>
+              <p>I hope you keep enjoy drawing and doodling and doing all the little things that make you happy to do.</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">04</span>
+              <p>I hope every skill you learn today becomes something useful and meaningful for your future, and can helps your parents also.</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">05</span>
+              <p>I hope you meet many good people who appreciate you, support you, and remind you of how wonderful you are. And whenever life gets difficult</p>
+            </div>
+
+            <div class="card wishes-card">
+              <span class="num">06</span>
+              <p>I hope you remember that you don't have to figure everything out at once. Take your time, keep going, and be proud of how far you've come.</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">07</span>
+              <p>I wish you good health, peaceful days, beautiful memories, exciting adventures, and countless reasons to smile.
+Most importantly, I hope you always have the courage to chase the things you dream about. Don't be afraid to grow, change, make mistakes everytime, don't felt fail and do it again</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">08</span>
+              <p>I hope your future is filled with beautiful colors, just like the colors you've brought into my</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">09</span>
+              <p>And I hope you always remember that whenever you feel lost, you have someone you can come to and tell everything that’s been happening to you. You can always talk to me, okay? So please, don’t ever feel hesitant to tell me what happened or what’s on your mind. I’ll always be here to listen. 🦋</p>
+            </div>
+            <div class="card wishes-card">
+              <span class="num">10</span>
+              <p>Also, I hope you can achieve every dream you've ever dreamed of and accomplish all the things you've been working toward. I hope you can make yourself, your loved ones, your partner, and your family proud of everything you achieve.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-track">
+          <div class="text">
+            <p>Happy Birthday sayangg!! ✦</p>
+            <p>today is all yours ✦</p>
+            <p>loved beyond words ✦</p>
+            <p>Enjoy your day ✦</p>
+            <p>Love you my sweetheart ✦</p>
+          </div>
+          <div class="text" aria-hidden="true">
+            <p>Happy Birthday sayangg!! ✦</p>
+            <p>today is all yours ✦</p>
+            <p>loved beyond words ✦</p>
+            <p>Enjoy your day ✦</p>
+            <p>Love you my sweetheart ✦</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- tiles -->
+      <div class="c-tiles">
+        <a class="card tile" href="photos.html">
+          <span class="icn"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg></span>
+          <span class="label">Photos</span>
+        </a>
+        <div class="card tile">
+          <span class="icn"><svg viewBox="0 0 24 24"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7c-1.5-3-6-4-6-1s4.5 1 6 1z"/><path d="M12 7c1.5-3 6-4 6-1s-4.5 1-6 1z"/></svg></span>
+          <span class="label">Gifts</span>
+        </div>
+      </div>
+    </section>
+    <div class="footer-note">purple winks · happy birthday, Dhia</div>
+  </div>
+
+  <div class="form-popup" id="myForm" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="card c-popup" onclick="event.stopPropagation()">
+      <div class="popup-pages" id="popupPages">
+        <section class="popup-page" data-page="0">
+          <div class="popup-photo-wrap1"><div class="popup-photo1"><img src="draws/Frist being.png" alt="" onerror="this.parentElement.classList.add('no-photo')"></div></div>
+          <h1 id="popupTitle">Dear Dhia,</h1>
+          <p>Dhiaaaaaaaaa. Selamat ulang tahun sayangg akuuu. yang ke-17 tahun, enjoy your day sayangg, today is all yours<3. dikit sihh yangg pengen akuu bilang butt, ssssaaaayyyyaaaanngggg i love youu, i love youu so much. I. RALLY. REALLY. RALLY. LOVE. YOUU<3. SO. MUCH. masihh yaa sayangg udahh mauu sama akuu sampe sejauh ini i know kitaa inii baru 4 bulan but dari semua hal yang udahh kita lakuin, semua kelakuan akuu, semua pertanyaan akuu, semua overthinking akuu. kamuu masihh tetep disini sama akuu dan ga milih buatt ninggalin akuu. like i said before, orang lain pasti bakal nyerah dan muak sama semua overthinking dan pertanyaan akuu ini, but youu... you're nott kamuu gaa cape samaa akuu dan gaa males samaa akuu. that's why I really really love youuu dari banyak nya cewe yang adaa di bumi inii akuu akan tetep milih kamuu kamuu kamuu dan kamuu kapanpun ituu dimanapun ituu.</p>
+        </section>
+        <section class="popup-page" data-page="1">
+          <div class="popup-photo-wrap"><div class="popup-photo"><img src="draws/draw-13.jpg" alt="" onerror="this.parentElement.classList.add('no-photo')"></div></div>
+          <p>Akuu udahh cerita ini berkali-kali but akuu mauu cerita lagii hehe<3, awall akuu ketemu kamuu akuu ga tauu apa apa soal kamuu dan akuu jugaa ga nyangka kaloo kamuu bakal jadii pacar akuu<3 but yaa awall awall akuu cuma ngangep kamuu kaya member biasa ajaa, and then akuu ngeliat kamuu suka voice sendirian di genno pas ituu akuu ga mikir apaa apaa soal kamuu dan cuma mauu nemenin member ajaa but semakin lamaa akuu ngevoice sama kamuu akuu salah kaloo kamuu ituu respect sama semua orang mauu orang yang kamuu baru temuin kamuu tetep hormat ke diaa dan yaa that's one thing that I look from youu, sampe... kamuu ngajak akuu cp dan disitu akuu mulai mikir "should i get closer with her??"</p>
+        </section>
+        <section class="popup-page" data-page="2">
+          <p>mungkin kamuu ngajak akuu cp karna cuma buat iseng ajaa but akuu enggaa, aku kaya ngerasa dapet harapan disituu:3 so... yaa akuu coba buatt ngikut ajaa dan coba dikit dikit ngedeketin kamuu. teruss akuu mikir, you're a good person kamuu ga pernah ngerendahin siapa siapa, mauu ituu cowo atauu cewe, even diaa yang punya masalah sama kamuu kamuu tetep hormat ke mereka and that's the second one:3, skip sampe akhir ramadhan akuu disitu udahh mulai punyaa perasaan sama kamuu (sebenernya udahh dari lama sihh hehe:3) dann akuu mulai mikir, "akuu harus confess ga yaa" tapii kaya yang kamuu tauu lahh akuu ini jugaa gengsi wkwk dan yaa akuu milih buat ga ngapa-ngapain dan nunggu kamuu duluan ajaa hehe, and thennn!! kamuu confess ke akuuu!!, disitu akuu gatauu mauu mikir apaa senengg iyaa, happy iyaa, campur aduk bangett pokok nyaa. and yaa kitaa akhirnya jadian dan semakin kesini akuu sadar kaloo kamuu emang sebaik ituu jugaaa and also I feels met a right person, and that's youuu<33. dan pas jadiann pun akuu ngerasa senengg bangett, kaya yang udahh akuu bilang berkali-kali, you're my live changes. banyakk hal yang akuu sebelumnya ga akuu lakuin tapii akuu suka lakuin pas sama kamuu, that's a lot of things. dan kalo kamuu nanya "akuu nyesel gaa sama kamuu" nahhh, I'LL NEVER SAID THAT gabakalll akuu sama sekali gaa nyesel punyaa hubungan samaa kamuu,</p>
+        </section>
+        <section class="popup-page" data-page="3">
+          <p>kamuu yang udahh banyak ngajarin akuu banyak hal, kamuu udahh ngasih kebanyakan waktu sehari-hari kamuu buatt akuu, kamuu udahh mauu sabar dan nerima semuaa kelakuan dan kekurangan akuu. I'm not that dumb untuk ninggalin orangg yang udahh ngasih semuanya ke akuuu. kamuu mungkin bilang, kalo kamuu udah banyak nyusahin akuu dan buang waktu akuuu. NAHHHH!! that is what i supposed to do as your boyfriend!! untuk buatt kamuu ngerasa nyaman, untuk ngasih motivasi ke kamuu, untuk ngebuat kamuu ngerasa dihargai, untuk ngebuat kamuu ngerasa jadii berguna, untuk ngebuat kamuu ga ngearas sendirii lagii disini, dll. ituu semuaa hal yang akuu harus lakuin ke kamuu, to make you felt yourself. dann kalo kamuu bilang "you're start losing yourself" nooo!! I'm not!! akuu ngelakuin ini karna kemauan dan keinginan akuu sendiri, this's myself, ngejagaa kamuuu. mungkin kamuu kagett yaa wkwk, nahh I'm not losing myself ituu karna akuu emangg ga nunjukin sisi ovt dan posesif inii dulu ke kamuu jadi kamuu mikir akuu udahh berubah sekarang. wkwk gaa sayangg akuu tetep abann, akuu abannn yangg kamuu sayangg, akuuu abannn cowokk kamuu, akuu abannn punyaa dhiaaaa!!. dan yaa intinya I LOVE YOU SO MUCH akuu gabakall ninggalin kamuuu kapanpun mauu adaa orang lainnya I'll still choose youu to be my girlfriend and to be my only person<3. sayanggg dhiaaaa sayanggg dhiaaaa bangettt bangettt moreee than everything I've lovee youu my pretty gorgeous beautiful princess lil butterfly dhiaaaaaaaa<3</p>
+        </section>
+        <section class="popup-page" data-page="4">
+          <div class="popup-photo-wrap"><div class="popup-photo"><img src="draws/draw-21.png" alt="" onerror="this.parentElement.classList.add('no-photo')"></div></div>
+          <p>wkwk daritadi malah curhat yaa. but yaa selamat ulang tahunn sayangg akuuu!! i hope we can celebrate this birthday every years together, enjoy your day sayangg akuuu. today is your turn, okeee??. dari akuu sihh ga banyakk yaa, akuu cuma pengen kamuu jadi diri kamuu sendiri, jadii orangg yang kamuu sayanggin dan orang lainn sukai, youu don't need to be anyone else just be yourself! be your own! dan hargai apaa yang udahh kamuu terima sekarang inii. jangann lupaa maamm sama mandii yaa sayangg, jaga kesehatan dan jangan sering sering overthinking yaa, okeee??. ingett jugaa sayangg kamuu ga sendiri kamuu punyaa orangg yang bisa diajak ngomong dan bagii bagij cerita, jangann pernah mikir kamuu kuat ngadepin inii semuaa kamuu masihh butuh orangg untuk ceritain semuaa masalah dihidup kamuu, cerita ajaa yaa ke akuu sayangg. I'll heard all of your stories mauu ituu gaberguna, cringe, jelek, nyakitin, I'll still heard that from youu<3 akuu bakal ada disampig kamuu kapanpun kamuu butuh akuu I'll won't go anywhere I'm is yours, all yours bukann punyaa orangg lainn dann cuma punyaa dhiaaa. dan akuu harap jugaa kamuu bisa ngeraih semua mimpi mimpi yangg selama ini kamuu idamin, ingett sayangg nothing is impossible. if it can't be yours god had a better plant for youu, that prepared to give it to youu. semua orang punyaa waktu dan kesempatan nyaa masing masing gaada yang gapunya and of course you'll get it!!. trust me. I love you so much my sweetheart<3</p>
+        </section>
+      </div>
+      <div class="btn-line">
+        <button type="button" class="btn btn-priv" id="popupPrev">Back</button>
+        <div class="popup-dots" id="popupDots"></div>
+        <button type="button" class="btn btn-next" id="popupNext">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---- popup pages ----
+    const popupPages = Array.from(document.querySelectorAll('.popup-page'));
+    const popupDotsEl = document.getElementById('popupDots');
+    const popupPrevBtn = document.getElementById('popupPrev');
+    const popupNextBtn = document.getElementById('popupNext');
+    let currentPage = 0;
+
+    popupPages.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'pdot';
+      dot.addEventListener('click', () => goToPage(i));
+      popupDotsEl.appendChild(dot);
+    });
+    const popupDots = Array.from(popupDotsEl.children);
+
+    function renderPage() {
+      popupPages.forEach((p, i) => p.classList.toggle('active', i === currentPage));
+      popupDots.forEach((d, i) => d.classList.toggle('active', i === currentPage));
+      popupPrevBtn.disabled = currentPage === 0;
+      popupNextBtn.textContent = currentPage === popupPages.length - 1 ? 'Done' : 'Next';
+      popupPages[currentPage].scrollTop = 0;
+    }
+
+    function goToPage(i) {
+      currentPage = Math.max(0, Math.min(popupPages.length - 1, i));
+      renderPage();
+    }
+
+    popupPrevBtn.addEventListener('click', () => goToPage(currentPage - 1));
+    popupNextBtn.addEventListener('click', () => {
+      if (currentPage === popupPages.length - 1) {
+        closeForm();
+      } else {
+        goToPage(currentPage + 1);
+      }
+    });
+
+    function openForm() {
+      goToPage(0);
+      document.getElementById("myForm").classList.add("open");
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").classList.remove("open");
+    }
+
+    // close when clicking the dark backdrop (outside the card)
+    document.getElementById("myForm").addEventListener("click", closeForm);
+
+    // close with Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeForm();
+    });
+
+    const music = document.getElementById("music");
+    const playBtn = document.getElementById("play-btn");
+    const playIcon = document.getElementById("play-icon");
+    const progress = document.getElementById("progress");
+    const currentTime = document.getElementById("current-time");
+    const duration = document.getElementById("duration");
+
+    playBtn.addEventListener("click", () => {
+
+      if (music.paused) {
+        music.play();
+
+        // pause icon
+        playIcon.innerHTML = `
+          <path d="M7 5h3v14H7z"/>
+          <path d="M14 5h3v14h-3z"/>
+        `;
+
+      } else {
+        music.pause();
+
+        // play icon
+        playIcon.innerHTML = `
+          <path d="M8 5v14l11-7-11-7Z"/>
+        `;
+      }
+
+    });
+
+
+    // UPDATE PROGRESS
+    music.addEventListener("timeupdate", () => {
+
+      if (!music.duration) return;
+
+      const percent =
+        (music.currentTime / music.duration) * 100;
+
+      progress.style.width = `${percent}%`;
+
+      currentTime.textContent =
+        formatTime(music.currentTime);
+
+    });
+
+
+    // GET DURATION
+    music.addEventListener("loadedmetadata", () => {
+
+      duration.textContent =
+        formatTime(music.duration);
+
+    });
+
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60)
+        .toString()
+        .padStart(2, "0");
+
+      return `${minutes}:${seconds}`;
+    }
+
+    music.addEventListener("ended", () => {
+      playIcon.innerHTML = `
+        <path d="M8 5v14l11-7-11-7Z"/>
+      `;
+
+      progress.style.width = "0%";
+      currentTime.textContent = "0:00";
+
+    });
+
+    const ambient = document.getElementById('ambient');
+    const dotCount = window.innerWidth < 600 ? 6 : 10;
+    for(let i=0;i<dotCount;i++){
+      const d = document.createElement('span');
+      d.className = 'dot';
+      const size = 3 + Math.random()*4;
+      d.style.width = size+'px';
+      d.style.height = size+'px';
+      d.style.left = Math.random()*100+'vw';
+      d.style.top = Math.random()*100+'vh';
+      d.style.animationDelay = (Math.random()*6)+'s';
+      d.style.animationDuration = (10+Math.random()*8)+'s';
+      ambient.appendChild(d);
+    }
+
+    document.querySelectorAll('.bottom-nav button').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.bottom-nav button').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    document.querySelectorAll('.ctrl-btn.play').forEach(btn=>{
+      const playIcon = btn.innerHTML;
+      const pauseIcon = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+      btn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        btn.innerHTML = btn.innerHTML === playIcon ? pauseIcon : playIcon;
+      });
+    });
+
+    const candles = document.querySelectorAll('#cakeScene .candle-btn');
+    const cakeFoot = document.getElementById('cakeFoot');
+    candles.forEach(c=>{
+      c.addEventListener('click', ()=>{
+        const flame = c.querySelector('.flame');
+        const lit = c.dataset.lit === '1';
+        c.dataset.lit = lit ? '0' : '1';
+        flame.classList.toggle('off', lit);
+        const allOut = Array.from(candles).every(x=>x.dataset.lit==='0');
+        cakeFoot.textContent = allOut ? 'wish made — happy birthday, Dhia' : 'tap the candles to blow them out';
+      });
+    });
+
+    const WISH_PHOTO_POOL = [
+      'photos/photo-1.jpg',
+      'photos/photo-2.jpg',
+      'photos/photo-3.jpg',
+      'photos/photo-4.jpg',
+      'photos/photo-6.jpg',
+      'photos/photo-11.jpg',
+      'photos/photo-15.jpg',
+      'photos/photo-13.jpg',
+      'photos/photo-10.jpg',
+      'photos/photo-17.jpg',
+      'photos/photo-16.jpg',
+    ];
+
+    const WISH_PHOTO_COUNT = 4; // how many to show at once (try 3 for a lighter card)
+
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function renderWishGallery() {
+      const container = document.getElementById('galleryTrack');
+      if (!container) return;
+
+      const picks = shuffle(WISH_PHOTO_POOL).slice(0, WISH_PHOTO_COUNT);
+
+      // duplicate the set once so the marquee can loop seamlessly at -50%
+      const sequence = picks.concat(picks);
+
+      container.innerHTML = '';
+      sequence.forEach(src => {
+        const wrap = document.createElement('div');
+        wrap.className = 'polaroid';
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.onerror = () => wrap.classList.add('no-photo');
+
+        wrap.appendChild(img);
+        container.appendChild(wrap);
+      });
+    }
+
+    renderWishGallery();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const backsound = document.getElementById('backsound');
+    const duration = 3000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, zIndex: 9999 });
+      confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, zIndex: 9999 });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    }());
+
+    let hasPlayed = false;
+    const startTime = 125;
+    const endTime = 140;
+    const fadeDuration = 3;
+
+    const playCustomAudio = () => {
+      if (hasPlayed) return;
+
+      backsound.currentTime = startTime;
+      backsound.volume = 1;
+
+      backsound.play().then(() => {
+        hasPlayed = true;
+
+        const fadeStartTime = endTime - fadeDuration;
+
+        const handleTimeUpdate = () => {
+          if (backsound.currentTime >= fadeStartTime && backsound.currentTime < endTime) {
+            const timeLeft = endTime - backsound.currentTime;
+            backsound.volume = Math.max(0, timeLeft / fadeDuration);
+          } else if (backsound.currentTime >= endTime) {
+            backsound.pause();
+            backsound.volume = 1;
+            backsound.removeEventListener('timeupdate', handleTimeUpdate);
+          }
+        };
+
+        backsound.addEventListener('timeupdate', handleTimeUpdate);
+      }).catch(err => {
+        console.log("Browser blocked unmuted autoplay:", err);
+        // Fallback: trigger playback on the very first user interaction if blocked
+        const fallbackPlay = () => {
+          playCustomAudio();
+          ['click', 'touchstart', 'keydown'].forEach(evt => {
+            window.removeEventListener(evt, fallbackPlay);
+          });
+        };
+        ['click', 'touchstart', 'keydown'].forEach(evt => {
+          window.addEventListener(evt, fallbackPlay, { once: true });
+        });
+      });
+    };
+    playCustomAudio();
+  });
+
+  ScrollReveal().reveal('.reveal-top', { 
+      distance: '30px', origin: 'top', duration: 800, opacity: 0 
+  });
+  ScrollReveal().reveal('.reveal-card', { 
+      distance: '40px', origin: 'bottom', duration: 800, interval: 100, opacity: 0 
+  });
+  </script>
+
+</body>
+</html>
