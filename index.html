@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -592,9 +593,14 @@ Most importantly, I hope you always have the courage to chase the things you dre
         });
       });
     };
-
-    // Attempt instant play immediately on open
     playCustomAudio();
+  });
+
+  ScrollReveal().reveal('.reveal-top', { 
+      distance: '30px', origin: 'top', duration: 800, opacity: 0 
+  });
+  ScrollReveal().reveal('.reveal-card', { 
+      distance: '40px', origin: 'bottom', duration: 800, interval: 100, opacity: 0 
   });
   </script>
 
